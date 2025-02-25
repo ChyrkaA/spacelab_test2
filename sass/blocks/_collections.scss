@@ -1,0 +1,85 @@
+@use "../libs/variables" as *;
+.collections {
+	margin-top: 210px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__leftSide {
+		width: 780px;
+	}
+	&__tabs {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__tab {
+		width: 368px;
+		height: 98px;
+		font-family: Orbitron;
+		font-weight: 700;
+		font-size: 26.53px;
+		line-height: 33.27px;
+		letter-spacing: 0%;
+		color: $text-color-dark05;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin-top: 43px;
+		transition: 0.3s all ease-in-out;
+		&:hover {
+			box-shadow: 0px 4px 57px rgba(97, 86, 255, 0.51);
+			&:before {
+				background: linear-gradient(
+					272.52deg,
+					rgba(255, 166, 250, 0.9) 47.49%,
+					rgba(60, 121, 213, 0.9) 98.81%
+				);
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			z-index: 1;
+			padding: 3px;
+			background: linear-gradient(
+				272.52deg,
+				rgba(255, 166, 250, 0.3) 47.49%,
+				rgba(60, 121, 213, 0.3) 98.81%
+			);
+			mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
+					content-box exclude,
+				linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+		}
+		&_active {
+			background: linear-gradient(
+				92.23deg,
+				#ff56f6 21.43%,
+				#b936ee 50.63%,
+				#3bace2 100%,
+				#406aff 117.04%
+			);
+		}
+	}
+	&__rightSide {
+		width: 436px;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&_img {
+			width: auto;
+			max-height: 815px;
+		}
+	}
+	&__view {
+		margin-top: 43px;
+	}
+}

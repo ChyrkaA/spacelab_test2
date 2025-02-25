@@ -1,0 +1,156 @@
+@use "../libs/variables" as *;
+
+.nft {
+	margin-top: 217px;
+	&__wrapper {
+		width: 100%;
+	}
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 33px;
+	}
+	&__header {
+		font-family: Orbitron;
+		font-weight: 700;
+		font-size: 27px;
+		line-height: 33px;
+		letter-spacing: 0%;
+		color: $text-color;
+	}
+	&__view {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		text-decoration: none;
+		&_text {
+			font-family: Orbitron;
+			font-weight: 700;
+			font-size: 27px;
+			line-height: 33px;
+			letter-spacing: 0%;
+			color: $text-color;
+		}
+		&_arrow {
+			width: 40px;
+			margin-left: 27px;
+			height: auto;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__cards {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 47px;
+	}
+	&__card {
+		height: 621px;
+		width: 438px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.discover {
+			&__block {
+				position: static;
+				width: 100%;
+				height: 236px;
+			}
+			&__info {
+				clip-path: unset;
+				width: 100%;
+				height: 236px;
+				padding: 35px;
+				border-radius: unset;
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					z-index: 1;
+					padding: 3px;
+					background: linear-gradient(
+						145.77deg,
+						rgba(255, 255, 255, 0.28) 0%,
+						rgba(255, 255, 255, 0) 105.76%
+					);
+					mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
+							content-box exclude,
+						linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+				}
+			}
+			&__leftColumn {
+				width: 210px;
+				&_header {
+					font-size: 23px;
+					line-height: 46px;
+				}
+				&_user {
+					&-photo {
+						width: 37px;
+						height: 37px;
+					}
+					&-nickname {
+						font-size: 20px;
+						line-height: 46px;
+					}
+					&-point {
+						width: 16px;
+						height: 17px;
+						margin-left: 4px;
+					}
+				}
+				&_subheader {
+					font-size: 14px;
+					line-height: 46px;
+				}
+				&_etherum {
+					width: 155px;
+					&-img {
+						width: 25px;
+						height: 25px;
+					}
+					&-title {
+						font-size: 13px;
+						line-height: 16px;
+					}
+					&-subtitle {
+						margin-left: 4px;
+						font-size: 14px;
+						line-height: 14px;
+					}
+				}
+			}
+			&__rightColumn {
+				&_header {
+					font-size: 14px;
+					line-height: 46px;
+				}
+				&_counter {
+					&-title {
+						font-size: 23px;
+						line-height: 23px;
+					}
+					&-subtitle {
+						font-size: 14px;
+						line-height: 14px;
+					}
+				}
+				width: 145px;
+				&_btn {
+					width: 155px;
+					height: 49px;
+					font-size: 23.04px;
+					line-height: 29.4px;
+					color: $text-color;
+				}
+			}
+		}
+	}
+}

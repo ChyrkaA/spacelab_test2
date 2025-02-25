@@ -1,0 +1,19 @@
+@keyframes animate {
+	0% {
+		left: 0px;
+	}
+	100% {
+		left: -30px;
+	}
+}
+@keyframes rotation {
+	0% {
+		background: #ffa6fa;
+	}
+	50% {
+		background: #3c79d5;
+	}
+	100% {
+		background: #ffa6fa;
+	}
+}
