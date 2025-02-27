@@ -1,12 +1,13 @@
 @use "../libs/variables" as *;
 
-.exploreCol {
-	margin-top: 160px;
+.explorecol {
+	position: relative;
+	margin-top: 115px;
 	&__wrapper {
 		width: 100%;
 	}
 	&__cards {
-		margin-top: 48px;
+		margin-top: 44px;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
@@ -57,10 +58,10 @@
 		font-family: Rajdhani;
 		font-weight: 500;
 		font-size: 24px;
-		line-height: 46px;
+		line-height: 40px;
 		letter-spacing: 0px;
 		color: $text-color;
-		margin-top: 75px;
+		margin-top: 63px;
 	}
 	&__nickname {
 		position: relative;
@@ -84,13 +85,13 @@
 		display: flex;
 		justify-content: space-between;
 		width: 359px;
-		margin-top: 7px;
+		margin-top: 19px;
 	}
 	&__counter {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		&_number {
+		&-number {
 			font-family: Rajdhani;
 			font-weight: 600;
 			font-size: 32px;
@@ -99,7 +100,7 @@
 			text-align: center;
 			color: $text-color;
 		}
-		&_name {
+		&-name {
 			font-family: Rajdhani;
 			font-weight: 500;
 			font-size: 20px;
@@ -115,10 +116,24 @@
 		font-size: 20px;
 		line-height: 25px;
 		margin-top: 21px;
+		top: 21px;
+		right: -5px;
 		z-index: 2;
 		&:hover {
 			transform: scale(1.1);
 			box-shadow: 0px 4px 57px rgba(201, 86, 255, 0.8);
 		}
+	}
+	.circle1 {
+		position: absolute;
+		width: 246px;
+		height: 246px;
+		z-index: -1;
+		border-radius: 50%;
+		background: #a06693;
+		filter: blur(80px);
+		top: 50px;
+		left: 1050px;
+		opacity: 0.4;
 	}
 }

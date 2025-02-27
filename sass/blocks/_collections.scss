@@ -1,22 +1,25 @@
 @use "../libs/variables" as *;
 .collections {
-	margin-top: 210px;
+	position: relative;
+	margin-top: 212px;
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-top: 5px;
 	}
-	&__leftSide {
-		width: 780px;
+	&__left {
+		width: 784px;
 	}
 	&__tabs {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		margin-top: 43px;
 	}
 	&__tab {
-		width: 368px;
-		height: 98px;
+		width: 373px;
+		height: 102px;
 		font-family: Orbitron;
 		font-weight: 700;
 		font-size: 26.53px;
@@ -27,7 +30,7 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		margin-top: 43px;
+		margin-top: 42px;
 		transition: 0.3s all ease-in-out;
 		&:hover {
 			box-shadow: 0px 4px 57px rgba(97, 86, 255, 0.51);
@@ -38,6 +41,10 @@
 					rgba(60, 121, 213, 0.9) 98.81%
 				);
 			}
+		}
+		&:nth-child(1),
+		&:nth-child(2) {
+			margin-top: 0;
 		}
 
 		&:before {
@@ -59,6 +66,7 @@
 				linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
 		}
 		&_active {
+			color: $text-color;
 			background: linear-gradient(
 				92.23deg,
 				#ff56f6 21.43%,
@@ -68,18 +76,48 @@
 			);
 		}
 	}
-	&__rightSide {
+	&__right {
 		width: 436px;
 		height: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		&_img {
+		&-img {
 			width: auto;
 			max-height: 815px;
 		}
 	}
 	&__view {
 		margin-top: 43px;
+	}
+	.circle1,
+	.circle2,
+	.circle3 {
+		position: absolute;
+		width: 246px;
+		height: 246px;
+		z-index: -1;
+		border-radius: 50%;
+		background: #a06693;
+		filter: blur(180px);
+	}
+	.circle1 {
+		top: 30px;
+		left: 600px;
+		opacity: 0.4;
+	}
+	.circle2 {
+		width: 1400px;
+		height: 1400px;
+		top: 220px;
+		left: -800px;
+		opacity: 0.1;
+	}
+	.circle3 {
+		width: 1400px;
+		height: 1400px;
+		top: 100px;
+		left: 70%;
+		opacity: 0.2;
 	}
 }

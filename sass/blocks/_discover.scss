@@ -2,6 +2,7 @@
 @use "../libs/animations" as *;
 
 .discover {
+	width: 100%;
 	position: relative;
 	margin-top: 105px;
 	&__wrapper {
@@ -10,7 +11,7 @@
 		align-items: flex-start;
 		position: relative;
 	}
-	&__header {
+	&__title {
 		margin: 0;
 		padding: 0;
 		font-family: Spartan;
@@ -44,8 +45,8 @@
 		display: flex;
 		justify-content: space-between;
 		width: 436px;
-		margin-top: 43px;
-		&_link {
+		margin-top: 25px;
+		&-link {
 			display: flex;
 			align-items: center;
 			margin-left: 38px;
@@ -66,11 +67,10 @@
 			}
 		}
 	}
-
-	&__btn {
+	&__btns {
 		position: relative;
-		width: 100%;
-		height: 100%;
+		width: 250px;
+		height: 64px;
 		border-radius: 2px;
 		clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
 		padding: 2px;
@@ -79,12 +79,7 @@
 		justify-content: center;
 		align-items: center;
 		animation: rotation 12s linear infinite;
-	}
-	&__btns {
-		position: relative;
-		width: 250px;
-		height: 64px;
-		&_btn1 {
+		&-btn {
 			width: 245px;
 			height: 59px;
 			font-family: Orbitron;
@@ -121,7 +116,7 @@
 				margin-left: 11px;
 			}
 		}
-		&_shadow {
+		&-shadow {
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -148,7 +143,7 @@
 		&:nth-child(3) {
 			border-right: none;
 		}
-		&_title {
+		&-title {
 			font-family: Aldrich;
 			font-weight: 400;
 			font-size: 40px;
@@ -156,7 +151,7 @@
 			letter-spacing: 0.22px;
 			color: $text-color;
 		}
-		&_subtitle {
+		&-subtitle {
 			font-family: Alethia Next;
 			font-weight: 400;
 			font-size: 18px;
@@ -168,8 +163,8 @@
 	&__card {
 		position: absolute;
 		width: 405px;
-		top: 0;
-		right: 90px;
+		top: 15px;
+		right: 82px;
 	}
 	&__img {
 		box-shadow: 2px 6px 4.42px 0px rgba(0, 0, 0, 0.25);
@@ -179,8 +174,8 @@
 	}
 	&__block {
 		position: absolute;
-		top: 350px;
-		right: -90px;
+		top: 353px;
+		right: -89px;
 		width: 336px;
 		height: 181px;
 		display: flex;
@@ -218,14 +213,14 @@
 		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
 		z-index: 0;
 	}
-	&__bckg &__leftColumn,
-	&__rightColumn {
+	&__bckg &__left,
+	&__right {
 		display: flex;
 		flex-direction: column;
 	}
-	&__leftColumn {
+	&__left {
 		width: 150px;
-		&_header {
+		&-title {
 			font-family: Rajdhani;
 			font-weight: 700;
 			font-size: 18px;
@@ -233,7 +228,7 @@
 			letter-spacing: 0px;
 			color: $text-color;
 		}
-		&_user {
+		&-user {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -257,7 +252,7 @@
 				height: 13px;
 			}
 		}
-		&_subheader {
+		&-subheader {
 			font-family: Rajdhani;
 			font-weight: 600;
 			font-size: 11.05px;
@@ -266,7 +261,7 @@
 			color: $text-color-dark07;
 			margin-top: 5px;
 		}
-		&_etherum {
+		&-etherum {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -295,9 +290,9 @@
 			}
 		}
 	}
-	&__rightColumn {
+	&__right {
 		width: 110px;
-		&_header {
+		&-title {
 			font-family: Rajdhani;
 			font-weight: 600;
 			font-size: 11px;
@@ -305,13 +300,13 @@
 			letter-spacing: 0px;
 			color: $text-color-dark07;
 		}
-		&_counters {
+		&-counters {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
 		}
-		&_counter {
+		&-counter {
 			display: flex;
 			flex-direction: column;
 			&-title {
@@ -332,7 +327,7 @@
 				margin-top: 8px;
 			}
 		}
-		&_btn {
+		&-btn {
 			font-family: Rajdhani;
 			font-weight: 600;
 			font-size: 18px;
@@ -380,6 +375,34 @@
 					linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
 			}
 		}
+	}
+	.circle1,
+	.circle2,
+	.circle3 {
+		position: absolute;
+		width: 154px;
+		height: 154px;
+		z-index: -1;
+		border-radius: 50%;
+		background: rgba(255, 177, 238, 1);
+		filter: blur(80px);
+	}
+	.circle1 {
+		top: 200px;
+		left: 1159px;
+		opacity: 0.4;
+	}
+	.circle2 {
+		top: 220px;
+		left: 800px;
+		opacity: 0.2;
+	}
+	.circle3 {
+		width: 272px;
+		height: 272px;
+		top: 400px;
+		left: 200px;
+		opacity: 0.2;
 	}
 }
 

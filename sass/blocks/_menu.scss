@@ -1,8 +1,10 @@
 @use "../libs/variables" as *;
-
+header {
+	position: relative;
+}
 .menu {
 	width: 100%;
-	&__bigMenu {
+	&__big-menu {
 		display: none;
 	}
 	&__wrapper {
@@ -13,14 +15,14 @@
 		margin-top: 53px;
 		height: 48px;
 	}
-	&__leftSide {
+	&__left {
 		display: flex;
 		align-items: center;
-		&_logo {
+		&-logo {
 			width: 17px;
 			height: 27px;
 		}
-		&_text {
+		&-text {
 			font-family: Orbitron;
 			font-weight: 700;
 			font-size: 20px;
@@ -46,7 +48,8 @@
 		padding: 0 11px;
 	}
 	&__items {
-		&_link {
+		list-style: none;
+		&-link {
 			text-decoration: none;
 			color: $text-color-dark;
 			&:hover {
@@ -61,7 +64,7 @@
 	}
 	&__basket,
 	&__profile {
-		&_img {
+		&-img {
 			width: 22px;
 			height: 22px;
 		}

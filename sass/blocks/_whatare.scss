@@ -1,0 +1,79 @@
+@use "../libs/variables" as *;
+.whatare {
+	background: url(../img/whatare/bckg.webp) no-repeat center/cover;
+	margin-top: 179px;
+	height: 556px;
+	position: relative;
+	&__wrapper {
+		position: absolute;
+		top: 220px;
+		right: 120px;
+		width: 577px;
+		height: 473px;
+		backdrop-filter: blur(46px);
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 58px 47px 51px 71px;
+		display: flex;
+		flex-direction: column;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			z-index: 1;
+			border-radius: 3px;
+			padding: 3px;
+			background: linear-gradient(
+				113.62deg,
+				#616161 0%,
+				rgba(255, 255, 255, 0) 96.25%
+			);
+			mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
+					content-box exclude,
+				linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+		}
+	}
+	&__title {
+		font-family: Inter;
+		font-weight: 800;
+		font-size: 45px;
+		line-height: 60px;
+		letter-spacing: 0%;
+		color: $text-color;
+		margin: 0;
+	}
+	&__text {
+		font-family: Inter;
+		font-weight: 400;
+		font-size: 20.03px;
+		line-height: 35.61px;
+		letter-spacing: 0%;
+		color: $text-color;
+		margin: 0;
+		margin-top: 18px;
+	}
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		width: 271px;
+		margin-top: 45px;
+	}
+	&__link {
+		font-family: Inter;
+		font-weight: 500;
+		font-size: 17.8px;
+		line-height: 26.71px;
+		letter-spacing: 0%;
+		color: $text-color;
+		text-decoration: none;
+		cursor: pointer;
+		z-index: 1;
+		&:hover {
+			color: $text-color;
+			text-decoration: none;
+		}
+	}
+}
