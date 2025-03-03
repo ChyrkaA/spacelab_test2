@@ -16,15 +16,17 @@
 		padding: 0;
 		font-family: Spartan;
 		font-weight: 600;
-		font-size: 66px;
+		font-size: 66.5px;
 		line-height: 91px;
-		letter-spacing: 0%;
+		letter-spacing: 0em;
 		width: 848px;
 		height: 181px;
 		color: $text-color;
+		margin-left: -5px;
 		span {
 			font-family: Spartan;
 			font-weight: 600;
+			font-size: 67px;
 			background: linear-gradient(312deg, #43a5e3 0%, #ff56f6 100%);
 			background-clip: text;
 			color: transparent;
@@ -33,23 +35,27 @@
 	&__text {
 		font-family: Rajdhani;
 		font-weight: 400;
-		font-size: 27px;
+		font-size: 26.5px;
 		line-height: 44px;
 		letter-spacing: 0%;
 		color: $text-color;
 		width: 658px;
 		height: 88px;
+		margin: 0;
+		margin-left: -3px;
 		margin-top: 21px;
 	}
 	&__links {
 		display: flex;
 		justify-content: space-between;
 		width: 436px;
-		margin-top: 25px;
+		margin: 0;
+		margin-left: -5px;
+		margin-top: 42px;
 		&-link {
 			display: flex;
 			align-items: center;
-			margin-left: 38px;
+			margin-left: 32px;
 			font-family: Orbitron;
 			font-weight: 700;
 			font-size: 19.9px;
@@ -69,10 +75,10 @@
 	}
 	&__btns {
 		position: relative;
-		width: 250px;
-		height: 64px;
+		width: 254px;
+		height: 67px;
 		border-radius: 2px;
-		clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+		clip-path: polygon(16% 0%, 100% 0%, 100% 78%, 86% 100%, 0% 100%, 0% 28%);
 		padding: 2px;
 		background: linear-gradient(-272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
 		display: flex;
@@ -98,7 +104,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+			clip-path: polygon(16% 0%, 100% 0%, 100% 78%, 86% 100%, 0% 100%, 0% 28%);
 			position: relative;
 			border-radius: 2px;
 			z-index: 0;
@@ -106,14 +112,15 @@
 			box-shadow: 0px 4.42px 107.23px 0px rgba(255, 86, 246, 0.51);
 			text-decoration: none;
 			transition: 0.3s all ease-in-out;
+			padding-left: 34px;
 			&:hover {
 				text-decoration: none;
 				color: $text-color;
 				font-size: 21px;
 			}
 			&-img {
-				width: 49px;
-				margin-left: 11px;
+				width: 52px;
+				margin-left: 12px;
 			}
 		}
 		&-shadow {
@@ -134,12 +141,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 480px;
-		margin-top: 69px;
+		width: 494px;
+		margin-top: 65px;
+		margin-left: -3px;
 	}
 	&__counter {
-		padding-right: 15px;
+		padding-right: 14px;
 		border-right: 1px solid rgba(255, 255, 255, 0.26);
+		&:nth-child(2) {
+			width: auto;
+			padding-right: 23px;
+			margin-left: -6px;
+		}
 		&:nth-child(3) {
 			border-right: none;
 		}
@@ -152,10 +165,11 @@
 			color: $text-color;
 		}
 		&-subtitle {
+			margin-top: 0px;
 			font-family: Alethia Next;
 			font-weight: 400;
-			font-size: 18px;
-			line-height: 22px;
+			font-size: 16px;
+			line-height: 15px;
 			letter-spacing: 0.22px;
 			color: $text-color;
 		}
@@ -174,22 +188,22 @@
 	}
 	&__block {
 		position: absolute;
-		top: 353px;
-		right: -89px;
+		top: 355px;
+		right: -87px;
 		width: 336px;
-		height: 181px;
+		height: 185px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	&__info {
 		width: 330px;
-		height: 175px;
+		height: 180px;
 		display: flex;
 		justify-content: space-between;
 		padding: 28px 20px 20px 20px;
 		border-radius: 9px;
-		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+		clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
 		background: linear-gradient(
 			90deg,
 			rgba(255, 255, 255, 0.1) 0%,
@@ -210,7 +224,7 @@
 			rgba(255, 255, 255, 0.18) 0%,
 			rgba(255, 255, 255, 0) 105.76%
 		);
-		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+		clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
 		z-index: 0;
 	}
 	&__bckg &__left,
@@ -223,7 +237,7 @@
 		&-title {
 			font-family: Rajdhani;
 			font-weight: 700;
-			font-size: 18px;
+			font-size: 17.8px;
 			line-height: 35px;
 			letter-spacing: 0px;
 			color: $text-color;
@@ -234,7 +248,7 @@
 			align-items: center;
 			height: auto;
 			width: 120px;
-			margin-top: 2px;
+			margin-top: 1px;
 			&-photo {
 				width: 29px;
 				height: 29px;
@@ -242,36 +256,40 @@
 			&-nickname {
 				font-family: Rajdhani;
 				font-weight: 600;
-				font-size: 15px;
+				font-size: 15.3px;
 				line-height: 35px;
 				letter-spacing: 0px;
 				color: $text-color;
+				margin-left: 1px;
 			}
 			&-point {
 				width: 12px;
 				height: 13px;
 			}
 		}
-		&-subheader {
+		&-subtitle {
 			font-family: Rajdhani;
 			font-weight: 600;
-			font-size: 11.05px;
-			line-height: 35.37px;
+			font-size: 11px;
+			line-height: 35px;
 			letter-spacing: 0px;
 			color: $text-color-dark07;
-			margin-top: 5px;
+			margin-top: 7px;
 		}
 		&-etherum {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 130px;
+			width: 121px;
 			height: auto;
+			margin-top: -3px;
+			margin-left: -3px;
 			&-img {
 				width: 19px;
 				height: 19px;
 			}
 			&-title {
+				margin-left: -4px;
 				font-family: Orbitron;
 				font-weight: 700;
 				font-size: 10px;
@@ -299,12 +317,14 @@
 			line-height: 35px;
 			letter-spacing: 0px;
 			color: $text-color-dark07;
+			margin-top: 3px;
 		}
 		&-counters {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 100%;
+			width: 96%;
+			margin-top: -5px;
 		}
 		&-counter {
 			display: flex;
@@ -320,11 +340,15 @@
 			&-subtitle {
 				font-family: Rajdhani;
 				font-weight: 500;
-				font-size: 11px;
-				line-height: 11px;
+				font-size: 11.6px;
+				line-height: 12px;
 				letter-spacing: 0px;
 				color: $text-color-dark07;
-				margin-top: 8px;
+				margin-top: 4px;
+				margin-left: -2px;
+			}
+			&:nth-child(2) {
+				margin-left: -3px;
 			}
 		}
 		&-btn {
@@ -340,15 +364,16 @@
 				#3bace2 100%,
 				#406aff 117.04%
 			);
-			width: 120px;
-			height: 38px;
+			width: 123px;
+			height: 42px;
 			position: relative;
 			clip-path: unset;
 			top: 28px;
 			left: unset;
-			right: 5px;
+			right: 8px;
 			transform: translate(0);
 			border-radius: 3px;
+			padding-left: 0;
 			transition: 0.3s all ease-in-out;
 			&-img {
 				width: 24px;

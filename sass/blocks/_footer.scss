@@ -12,7 +12,7 @@
 		margin-top: 96px;
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 40px;
+		margin-bottom: 86px;
 	}
 	&__logo {
 		display: flex;
@@ -27,8 +27,8 @@
 			margin-left: 4px;
 			font-family: Orbitron;
 			font-weight: 700;
-			font-size: 19.9px;
-			line-height: 24.95px;
+			font-size: 20px;
+			line-height: 25px;
 			letter-spacing: 0%;
 			color: $text-color;
 			margin-top: 5px;
@@ -37,11 +37,11 @@
 	&__text {
 		font-family: Inter;
 		font-weight: 400;
-		font-size: 15.48px;
-		line-height: 26.53px;
+		font-size: 15.5px;
+		line-height: 26.5px;
 		letter-spacing: 0%;
 		color: rgba(217, 219, 225, 1);
-		width: 282px;
+		width: 279px;
 		margin-top: 31px;
 	}
 	&__socials {
@@ -61,12 +61,13 @@
 			display: flex;
 			justify-content: space-between;
 			width: 1117px;
-			margin-left: 90px;
+			margin-left: 92px;
 		}
 	}
 	&__column {
 		width: 177px;
 		height: 237px;
+		margin-right: -4px;
 		&-title {
 			font-family: Inter;
 			font-weight: 500;
@@ -81,7 +82,7 @@
 		}
 		&-item {
 			list-style: none;
-			margin-top: 13px;
+			margin-top: 13.6px;
 			&-link {
 				font-family: Inter;
 				font-weight: 400;
@@ -114,16 +115,17 @@
 		&-left {
 			font-family: Inter;
 			font-weight: 400;
-			font-size: 15.48px;
+			font-size: 15.5px;
 			line-height: 26.53px;
 			letter-spacing: 0%;
 			color: rgba(217, 219, 225, 1);
+			margin-left: -3px;
 		}
 		&-link {
 			font-family: Inter;
 			font-weight: 400;
-			font-size: 15.48px;
-			line-height: 26.53px;
+			font-size: 15.7px;
+			line-height: 27px;
 			letter-spacing: 0%;
 			color: rgba(217, 219, 225, 1);
 			text-decoration: none;
@@ -136,6 +138,10 @@
 			&:nth-last-child(1) {
 				border: none;
 			}
+		}
+		&-right {
+			margin-right: 38px;
+			margin-top: -2px;
 		}
 	}
 	.circle1 {

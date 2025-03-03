@@ -1,8 +1,19 @@
 .company {
-	margin-top: 120px;
+	margin-top: 126px;
+	height: 60px;
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		align-items: center;
+		height: 60px;
+	}
+	&__logo {
+		&:nth-child(1) {
+			margin-top: -6px;
+		}
+		&:nth-child(4) {
+			margin-top: 14px;
+		}
 	}
 }

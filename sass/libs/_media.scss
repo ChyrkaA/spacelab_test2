@@ -4,7 +4,7 @@
 		max-width: 1300px;
 	}
 	.nft {
-		overflow: unset;
+		// overflow: unset;
 		&__card {
 			width: 30%;
 			height: auto;
@@ -50,6 +50,11 @@
 			font-size: 40px;
 			line-height: 70px;
 			width: 500px;
+			span {
+				font-size: 40px;
+				line-height: 70px;
+				width: 500px;
+			}
 		}
 		&__text {
 			margin: 0;
@@ -66,6 +71,9 @@
 			&-subtitle {
 				font-size: 15px;
 			}
+		}
+		.circle1 {
+			left: 100px;
 		}
 	}
 	.company {
@@ -97,6 +105,9 @@
 				}
 			}
 		}
+		.circle2 {
+			left: 320px;
+		}
 	}
 	.collections {
 		margin-top: 100px;
@@ -114,10 +125,17 @@
 				height: auto;
 			}
 		}
+		.circle3 {
+			width: 200px;
+			height: 200px;
+		}
 	}
 	.explorecol {
 		&__counters {
 			width: 90%;
+		}
+		.circle1 {
+			left: 100px;
 		}
 	}
 	.sellers {
@@ -229,7 +247,7 @@
 		max-width: 720px;
 	}
 	header {
-		position: fixed;
+		position: static;
 		width: 100%;
 		top: 0;
 		z-index: 2;
@@ -307,9 +325,9 @@
 				&-link {
 					color: #fff;
 					text-decoration: none;
-					font-size: 50px;
+					font-size: 36px;
 					z-index: 3;
-					margin-top: 30px;
+					margin-top: 40px;
 					&:hover {
 						color: #fff;
 						text-decoration: none;
@@ -332,6 +350,9 @@
 			right: 0;
 			width: 100%;
 		}
+		.circle2 {
+			left: 500px;
+		}
 	}
 	.company {
 		margin-top: 50px;
@@ -340,6 +361,11 @@
 		margin-top: 600px;
 		&__card {
 			width: 350px;
+		}
+		&__cards {
+			&_container {
+				overflow-x: hidden;
+			}
 		}
 	}
 	.collections {
@@ -350,18 +376,33 @@
 		&__left {
 			width: 100%;
 		}
+		&__right {
+			height: 300px;
+			&-img {
+				height: 100%;
+				width: auto;
+			}
+		}
+		.circle1 {
+			left: 100px;
+		}
 	}
 	.explorecol {
 		&__card {
 			width: 350px;
 		}
+		&__container {
+			overflow-x: hidden;
+		}
 	}
 	.sellers {
 		&__tab {
-			@for $i from 5 through 12 {
-				&:nth-child(#{$i}) {
-					display: none;
-				}
+			display: none;
+			&:nth-child(2),
+			&:nth-child(5),
+			&:nth-child(8),
+			&:nth-child(11) {
+				display: flex;
 			}
 		}
 	}
@@ -402,6 +443,7 @@
 	.container {
 		max-width: 540px;
 	}
+
 	.discover {
 		&__btns {
 			width: 133px;
@@ -428,6 +470,12 @@
 		&__card {
 			top: 650px;
 		}
+		.circle2 {
+			left: 100px;
+		}
+		.circle3 {
+			left: 100px;
+		}
 	}
 	.company {
 		&__wrapper {
@@ -447,6 +495,16 @@
 			transform: translateX(50%);
 		}
 	}
+	.collections {
+		.circle2 {
+			width: 100%;
+			height: 200px;
+			left: 0;
+		}
+		.circle3 {
+			left: 50px;
+		}
+	}
 	.subscribe {
 		margin-top: 200px;
 		&__form {
@@ -456,6 +514,11 @@
 		}
 		&__left {
 			width: 100%;
+		}
+	}
+	.nft {
+		.circle2 {
+			left: 100px;
 		}
 	}
 	.footer {
@@ -522,21 +585,54 @@
 }
 
 @media (max-width: 575px) {
+	.circle {
+		&1,
+		&2,
+		&3,
+		&4 {
+			display: none;
+		}
+	}
 	.container {
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 15px 0 22px;
 	}
+	.menu {
+		&__wrapper {
+			.hamburger {
+				margin-right: 14px;
+				margin-top: 3px;
+			}
+		}
+		&__left {
+			margin-left: 1px;
+			margin-top: 9px;
+			&-logo {
+				width: 13px;
+				height: 22px;
+			}
+			&-text {
+				font-size: 16px;
+				line-height: 20px;
+				margin-bottom: 5px;
+				margin-left: 5px;
+			}
+		}
+	}
+
 	.menu__big {
 		&-menu-list {
 			padding-left: 0;
 		}
 	}
 	.discover {
+		margin-top: 47px;
 		&__title {
+			margin-left: 9px;
 			font-family: Lato;
 			font-weight: 700;
 			font-size: 42px;
-			line-height: 57px;
+			line-height: 57.5px;
 			width: 291px;
 			span {
 				font-family: Lato;
@@ -546,21 +642,25 @@
 			}
 		}
 		&__text {
-			margin-top: 40px;
+			margin-top: 20px;
+			margin-left: 9px;
 			font-size: 14px;
 			line-height: 23px;
 			width: 315px;
 			height: auto;
 		}
 		&__links {
-			margin-top: 50px;
+			margin-top: 32px;
+			margin-left: 9px;
 			&-link {
 				font-size: 12px;
 				line-height: 15px;
 			}
 		}
 		&__btns {
+			height: 35px;
 			&-btn {
+				padding-left: 15px;
 				&-img {
 					width: 28px;
 					height: 8px;
@@ -571,15 +671,19 @@
 			}
 		}
 		&__counters {
-			width: 100%;
+			width: 95%;
+			margin-top: 40px;
+			margin-left: 9px;
 		}
 		&__counter {
+			padding-right: 29px;
 			border-right: none;
 			&-title {
 				font-size: 18px;
 				line-height: 28px;
 			}
 			&-subtitle {
+				margin-top: 5px;
 				font-family: Lato;
 				font-weight: 400;
 				font-size: 12px;
@@ -587,13 +691,19 @@
 				letter-spacing: 0.12px;
 				color: $text-color-dark06;
 			}
+			&:nth-child(3) {
+				padding-right: 27px;
+			}
 		}
 		&__left {
 			&-title {
 				font-size: 17px;
 				line-height: 34px;
+				margin-top: -1px;
 			}
 			&-user {
+				width: 118px;
+				margin-top: -1px;
 				&-photo {
 					width: 28px;
 					height: 28px;
@@ -601,45 +711,117 @@
 				&-nickname {
 					font-size: 15px;
 					line-height: 34px;
+					margin-left: -4px;
 				}
 			}
-			&-subheader {
-				font-size: 10px;
+			&-subtitle {
+				font-size: 10.5px;
 				line-height: 34px;
+				margin-top: 5px;
 			}
 			&-etherum {
+				margin-top: -1px;
+				margin-left: -5px;
+				width: 117px;
 				&-title {
+					margin-left: -6px;
 					font-size: 9px;
 					line-height: 12px;
 				}
 				&-subtitle {
 					font-size: 10px;
 					line-height: 15px;
+					padding-top: 0;
+					margin-top: -3px;
 				}
 			}
 		}
 		&__right {
 			&-title {
-				font-size: 17px;
-				line-height: 34px;
+				font-size: 10.8px;
+				line-height: 20px;
+				margin-top: 5px;
+				margin-left: -3px;
 			}
 			&-btn {
 				width: 115px;
 				height: 36px;
 			}
+			&-counters {
+				margin-left: -3px;
+				width: 91%;
+			}
+			&-counter {
+				&-title {
+					font-size: 17px;
+					line-height: 17px;
+					margin-top: 9px;
+				}
+				&-subtitle {
+					font-size: 10.5px;
+					line-height: 11px;
+					margin-top: 4px;
+				}
+			}
+			&-btn {
+				margin-left: -5px;
+				width: 119px;
+				height: 40px;
+				font-size: 17px;
+				line-height: 22px;
+				padding: 0;
+			}
+		}
+		&__card {
+			width: 324px;
+			top: 587px;
+			margin-left: -4px;
+		}
+		&__img {
+			width: 100%;
+		}
+		&__block {
+			top: 335px;
+			width: 324px;
+			right: -3px;
+			height: 177px;
+		}
+		&__info {
+			padding-right: 14px;
+			width: 320px;
+			height: 173px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
 		}
 	}
 	.company {
+		margin-top: 43px;
+		margin-left: 9px;
 		&__wrapper {
-			column-gap: 25px;
-			row-gap: 37px;
+			column-gap: 10px;
+			row-gap: 25px;
 		}
 		&__logo {
-			width: 100%;
-			height: auto;
+			width: 143px;
+			&:nth-child(2) {
+				width: 92px;
+				margin-left: 10px;
+			}
+			&:nth-child(3) {
+				width: 188px;
+				margin-left: -10px;
+			}
+			&:nth-child(4) {
+				width: 106px;
+				margin-left: 16px;
+				margin-top: 5px;
+			}
 		}
 	}
 	.nft {
+		margin-top: 703px;
 		&__title {
 			font-size: 16px;
 			line-height: 20px;
@@ -648,7 +830,7 @@
 			display: none;
 		}
 		&__cards {
-			margin-top: 32px;
+			margin-top: 26px;
 		}
 		&__card {
 			width: 304px;
@@ -658,13 +840,16 @@
 			&__info {
 				height: 164px;
 				padding: 20px;
+				top: 81%;
 			}
 			&__left {
 				&-title {
-					font-size: 14px;
+					font-size: 13.5px;
 					line-height: 27px;
+					margin-top: 8px;
 				}
 				&-user {
+					margin-top: 3px;
 					justify-content: flex-start;
 					&-photo {
 						width: 26px;
@@ -679,7 +864,7 @@
 						margin-left: 15px;
 					}
 				}
-				&-subheader {
+				&-subtitle {
 					font-size: 9px;
 					line-height: 27px;
 					margin-top: 9px;
@@ -691,9 +876,9 @@
 						height: 18px;
 					}
 					&-title {
-						font-size: 9px;
+						font-size: 8px;
 						line-height: 27px;
-						margin-right: 2px;
+						margin-left: 2px;
 					}
 					&-subtitle {
 						font-size: 9px;
@@ -708,31 +893,47 @@
 					font-size: 9px;
 					line-height: 27px;
 					letter-spacing: 0px;
+					margin-top: 6px;
+					margin-left: 2px;
+				}
+				&-counters {
+					margin-top: -8px;
+					margin-left: 4px;
+					width: 90%;
 				}
 				&-counter {
 					&-title {
 						font-size: 14px;
-						line-height: 27px;
+						line-height: 14px;
 					}
 					&-subtitle {
 						font-size: 9px;
 						line-height: 27px;
 						margin: 0;
+						margin-top: -5px;
+						margin-left: -3px;
 					}
 				}
 				&-btn {
-					top: 0;
-					width: 108px;
-					height: 34px;
+					top: 19px;
+					width: 111px;
+					height: 38px;
 					font-size: 14px;
 					line-height: 17px;
+					padding-bottom: 1px;
+					left: 2px;
+					&-img {
+						width: 24px;
+						margin-left: 13px;
+					}
 				}
 			}
 		}
 		&__btns {
 			display: block;
 			margin: 0 auto;
-			margin-top: 40px;
+			margin-top: 38px;
+			transform: translateX(-6px);
 			.discover {
 				&__btns {
 					&-btn {
@@ -743,13 +944,17 @@
 		}
 	}
 	.collections {
-		margin-top: 109px;
+		margin-top: 103px;
+		&__tabs {
+			margin-top: 20px;
+			margin-left: -5px;
+		}
 		&__tab {
 			width: 153px;
-			height: 41px;
+			height: 41.2px;
 			font-size: 11px;
 			line-height: 14px;
-			margin-top: 18px;
+			margin-top: 19px;
 			&:before {
 				padding: 1px;
 			}
@@ -757,24 +962,39 @@
 		.nft__view {
 			display: flex;
 			width: auto;
-			margin-top: 18px;
+			margin-top: 12px;
 			&-text {
 				font-size: 8px;
 				line-height: 10px;
 			}
 			&-arrow {
 				width: 22px;
-				height: 6px;
+				height: 12px;
 				margin-left: 6px;
 			}
 		}
 		&__right {
-			margin-top: 4px;
+			margin-top: 28px;
+			margin-left: 71px;
+			height: 344px;
+		}
+		&__view {
+			margin-right: 0;
 		}
 	}
 	.explorecol {
+		margin-top: 88px;
+		.nft {
+			&__title {
+				font-size: 18px;
+			}
+			&__btns {
+				margin-top: 43px;
+			}
+		}
+
 		&__cards {
-			margin-top: 30px;
+			margin-top: 21px;
 		}
 		&__card {
 			width: 303px;
@@ -786,12 +1006,20 @@
 		&__avatar {
 			width: 113px;
 			height: 113px;
-			top: 70px;
+			top: 72px;
 		}
 		&__name {
 			font-size: 17px;
 			line-height: 17px;
-			margin-top: 50px;
+			margin-top: 53px;
+		}
+		&__nickname {
+			margin-top: 1px;
+			margin-left: -2px;
+		}
+		&__counters {
+			margin-top: 19px;
+			width: 80%;
 		}
 		&__link {
 			font-size: 14px;
@@ -803,46 +1031,56 @@
 			top: 7px;
 			right: -15px;
 		}
-		&__counters {
-			margin-top: 10px;
-		}
 		&__counter {
 			&-number {
 				font-size: 22px;
 				line-height: 22px;
 			}
 			&-name {
+				margin-top: 2px;
 				font-size: 14px;
 				line-height: 20px;
 			}
 		}
 		&__btn {
-			width: 163px;
-			height: 35px;
+			width: 166px;
+			height: 38px;
 			font-size: 14px;
 			line-height: 18px;
+			top: 4px;
+			margin-left: 4px;
+			right: unset;
 		}
 	}
 	.sellers {
+		margin-top: 108px;
 		&__title {
-			font-size: 19px;
+			font-size: 19.5px;
 			line-height: 24px;
+			margin-left: -3px;
 			span {
 				font-size: 19px;
 				line-height: 24px;
 			}
 		}
 		&__text {
+			margin-top: 10px;
+			margin-left: -10px;
 			font-size: 14px;
 			line-height: 20px;
-			width: 100%;
+			width: 94%;
+		}
+		&__tabs {
+			margin-top: 26px;
+			margin-left: -5px;
 		}
 		&__tab {
 			border-radius: 21px;
 			width: 317px;
 			height: 90px;
-			padding-left: 21px;
+			padding-left: 20px;
 			padding-right: 15px;
+			margin-bottom: 25px;
 			&-num {
 				font-size: 14px;
 				line-height: 32px;
@@ -867,31 +1105,41 @@
 					line-height: 10px;
 				}
 			}
-			&-percentage {
+			&-info {
+				margin-left: 8px;
+			}
+			&-percentage,
+			&-percentage_red {
 				width: 73px;
 				height: 26px;
 				font-size: 11px;
 				line-height: 34px;
-				&_red {
-					width: 73px;
-					height: 26px;
-					font-size: 11px;
-					line-height: 34px;
-				}
+				margin-top: 10px;
+				margin-right: 1px;
 			}
 
 			&:before {
 				border-radius: 21px;
+			}
+			&:nth-child(11) {
+				padding-left: 14px;
+				.sellers__tab {
+					&-avatar {
+						margin-left: 18px;
+					}
+				}
 			}
 		}
 		&__btn {
 			display: none;
 		}
 		&__btns {
-			margin-top: 0px;
+			margin-top: 8px;
+			transform: translateX(-4px);
 		}
 	}
 	.whatare {
+		margin-top: 108px;
 		height: 300px;
 		&__wrapper {
 			top: 120px;
@@ -901,10 +1149,12 @@
 		&__title {
 			font-size: 26px;
 			line-height: 35px;
+			margin-top: 3px;
 		}
 		&__text {
 			font-size: 12px;
 			line-height: 21px;
+			margin-top: 9px;
 		}
 		&__links {
 			width: 100%;
@@ -915,83 +1165,140 @@
 			font-size: 10px;
 			line-height: 16px;
 			&:nth-child(2) {
-				margin-left: 26px;
+				margin-left: 30px;
 			}
 		}
 	}
 	.subscribe {
+		margin-top: 178px;
 		&__title {
 			font-size: 26px;
 			line-height: 33px;
 		}
 		&__text {
-			font-size: 13px;
+			font-size: 13.3px;
 			line-height: 23px;
 			width: 100%;
+			margin-top: 17px;
 		}
 		&__form {
 			margin-top: 33px;
 			height: 35px;
+			width: 100%;
 			&-input {
 				height: 100%;
 				width: 181px;
-				font-size: 10px;
+				font-size: 10.5px;
 				line-height: 18px;
+				padding: 8px 9px;
+				padding-bottom: 9px;
 			}
 			&-btn {
-				height: 100%;
+				justify-content: flex-start;
+				align-items: flex-start;
+				height: 37px;
+				width: 98px;
 				font-size: 10px;
-				line-height: 15px;
+				padding-top: 15px;
+				padding-left: 21px;
+				line-height: 0px;
+				margin-left: 5px;
 			}
 		}
 		&__left {
+			padding-right: 10px;
 			width: 100%;
 			margin-top: 108px;
+			height: 379px;
 		}
 		&__img {
+			height: 100%;
 			width: 100%;
 		}
 	}
 	.footer {
+		margin-top: 109px;
+		margin-left: 4px;
 		&__wrapper {
 			border-bottom: none;
+		}
+		&__right-columns {
+			margin-top: 30px;
+			margin-left: -13px;
 		}
 		&__left-column {
 			width: 100%;
 			align-items: flex-start;
 		}
+
 		&__text {
-			font-size: 15px;
+			font-size: 15.6px;
 			line-height: 27px;
+		}
+		&__columns {
+			margin-top: 23px;
 		}
 		&__column {
 			&-title {
-				font-size: 15px;
-				line-height: 27px;
+				font-family: Inter;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 31px;
+				margin: 0;
+				&-chevron {
+					margin-right: 22px;
+
+					span {
+						width: 10px;
+						&:nth-child(1) {
+							transform: rotateZ(45deg) translateX(5px) translateY(13px);
+						}
+						&:nth-child(2) {
+							transform: rotateZ(-45deg) translateX(-7px) translateY(8px);
+						}
+					}
+				}
 			}
 			&-list {
 				margin-top: 0px;
 				margin-bottom: 0px;
 			}
 			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-			padding-top: 15px;
+			padding-top: 20px;
 			&:nth-child(5) {
 				border-bottom: none;
 			}
 		}
 		&__copyrights {
+			margin-top: -62px;
 			&-link {
 				&:nth-child(3) {
 					display: none;
 				}
-				font-size: 15px;
+				&:nth-child(2) {
+					margin: 0;
+					margin-right: 42px;
+				}
+				&:nth-child(1) {
+					margin-left: 14px;
+				}
+				font-size: 15.5px;
 				line-height: 27px;
 				border: none;
+				padding: 0;
+			}
+			&-right {
+				margin-right: 0;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
 			}
 			&-left {
+				width: 100%;
 				margin-top: 38px;
-				font-size: 15px;
+				font-size: 15.5px;
 				line-height: 27px;
+				margin-left: 21px;
 			}
 		}
 	}

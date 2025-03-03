@@ -2,8 +2,9 @@
 
 .nft {
 	position: relative;
-	margin-top: 224px;
-	overflow: hidden;
+	margin-top: 219px;
+	margin-left: 5px;
+
 	&__wrapper {
 		width: 100%;
 	}
@@ -17,7 +18,7 @@
 	&__title {
 		font-family: Orbitron;
 		font-weight: 700;
-		font-size: 27px;
+		font-size: 26.5px;
 		line-height: 33px;
 		letter-spacing: 0%;
 		color: $text-color;
@@ -27,6 +28,8 @@
 		justify-content: flex-end;
 		align-items: center;
 		text-decoration: none;
+		margin-top: -7px;
+		padding-right: 12px;
 		&-text {
 			font-family: Orbitron;
 			font-weight: 700;
@@ -39,6 +42,7 @@
 			width: 40px;
 			margin-left: 27px;
 			height: auto;
+			padding-bottom: 3px;
 		}
 		&:hover {
 			text-decoration: none;
@@ -49,6 +53,9 @@
 		justify-content: space-between;
 		width: 100%;
 		margin-top: 42px;
+	}
+	&__img {
+		height: 385px;
 	}
 	&__card {
 		height: 621px;
@@ -66,7 +73,7 @@
 				clip-path: unset;
 				width: 100%;
 				height: 236px;
-				padding: 35px;
+				padding: 35px 35px 35px 30px;
 				border-radius: unset;
 				&:before {
 					content: "";
@@ -92,8 +99,10 @@
 				&-title {
 					font-size: 23px;
 					line-height: 46px;
+					margin-top: 2px;
 				}
 				&-user {
+					margin-top: -2px;
 					&-photo {
 						width: 37px;
 						height: 37px;
@@ -101,38 +110,48 @@
 					&-nickname {
 						font-size: 20px;
 						line-height: 46px;
+						margin-left: 5px;
 					}
 					&-point {
 						width: 16px;
 						height: 17px;
-						margin-left: 4px;
+						margin-left: 6px;
 					}
 				}
-				&-subheader {
-					font-size: 14px;
+				&-subtitle {
+					margin-top: 8px;
+					font-size: 14.3px;
 					line-height: 46px;
 				}
 				&-etherum {
-					width: 155px;
+					margin-top: -4px;
+					margin-left: -6px;
+					width: 160px;
 					&-img {
 						width: 25px;
 						height: 25px;
 					}
 					&-title {
-						font-size: 13px;
+						margin-right: -3px;
+						font-size: 12.5px;
 						line-height: 16px;
 					}
 					&-subtitle {
-						margin-left: 4px;
-						font-size: 14px;
+						padding-left: 4px;
+						font-size: 14.2px;
 						line-height: 14px;
 					}
 				}
 			}
 			&__right {
+				padding-left: 7px;
 				&-title {
-					font-size: 14px;
+					margin-top: 2px;
+					font-size: 14.3px;
 					line-height: 46px;
+				}
+				&-counters {
+					width: 100%;
 				}
 				&-counter {
 					&-title {
@@ -143,16 +162,34 @@
 						font-size: 14px;
 						line-height: 14px;
 					}
+					&:nth-child(2) {
+						margin-left: -8px;
+					}
+					&:nth-child(3) {
+						.discover__right {
+							&-counter {
+								&-title {
+									margin-left: -3px;
+								}
+							}
+						}
+					}
 				}
 				width: 145px;
 				&-btn {
-					width: 155px;
-					height: 49px;
-					font-size: 23.04px;
-					line-height: 29.4px;
+					width: 160px;
+					height: 54px;
+					font-size: 23px;
+					line-height: 29px;
 					color: $text-color;
 					top: 40px;
-					right: 0;
+					right: 13px;
+					&-img {
+						width: 29px;
+						height: 12px;
+						margin-left: 16px;
+						margin-top: -2px;
+					}
 				}
 			}
 		}

@@ -2,12 +2,14 @@
 
 .explorecol {
 	position: relative;
-	margin-top: 115px;
+	margin-top: 164px;
+	margin-left: 4px;
+
 	&__wrapper {
 		width: 100%;
 	}
 	&__cards {
-		margin-top: 44px;
+		margin-top: 46px;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
@@ -57,14 +59,16 @@
 	&__name {
 		font-family: Rajdhani;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 24.5px;
 		line-height: 40px;
 		letter-spacing: 0px;
 		color: $text-color;
-		margin-top: 63px;
+		margin-top: 65px;
 	}
 	&__nickname {
 		position: relative;
+		margin-top: -3px;
+		margin-left: -5px;
 	}
 	&__link {
 		font-family: Rajdhani;
@@ -77,15 +81,15 @@
 	&__point {
 		position: absolute;
 		top: 7px;
-		right: -20px;
+		right: -23px;
 		width: 16px;
 		height: 17px;
 	}
 	&__counters {
 		display: flex;
 		justify-content: space-between;
-		width: 359px;
-		margin-top: 19px;
+		width: 351px;
+		margin-top: 21px;
 	}
 	&__counter {
 		display: flex;
@@ -108,16 +112,17 @@
 			letter-spacing: 0px;
 			text-align: center;
 			color: $text-color;
+			margin-top: -4px;
 		}
 	}
 	&__btn {
 		width: 235px;
-		height: 51px;
+		height: 55px;
 		font-size: 20px;
 		line-height: 25px;
 		margin-top: 21px;
-		top: 21px;
-		right: -5px;
+		top: 22px;
+		right: -3px;
 		z-index: 2;
 		&:hover {
 			transform: scale(1.1);

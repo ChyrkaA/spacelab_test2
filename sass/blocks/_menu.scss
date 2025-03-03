@@ -1,8 +1,10 @@
 @use "../libs/variables" as *;
 header {
+	overflow-x: hidden;
 	position: relative;
 }
 .menu {
+	overflow-x: hidden;
 	width: 100%;
 	&__big-menu {
 		display: none;
@@ -16,9 +18,11 @@ header {
 		height: 48px;
 	}
 	&__left {
+		margin-left: 6px;
 		display: flex;
 		align-items: center;
 		&-logo {
+			margin-bottom: 5px;
 			width: 17px;
 			height: 27px;
 		}
@@ -38,6 +42,7 @@ header {
 	}
 	&__center {
 		height: 100%;
+		margin-right: 265px;
 	}
 	&__list {
 		height: 100%;
@@ -50,6 +55,12 @@ header {
 	&__items {
 		list-style: none;
 		&-link {
+			font-family: Orbitron;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 25px;
+			letter-spacing: 0%;
+
 			text-decoration: none;
 			color: $text-color-dark;
 			&:hover {
@@ -58,6 +69,7 @@ header {
 		}
 	}
 	&__buttons {
+		margin-right: 5px;
 		height: 100%;
 		display: flex;
 		align-items: center;
@@ -65,8 +77,8 @@ header {
 	&__basket,
 	&__profile {
 		&-img {
-			width: 22px;
-			height: 22px;
+			width: 23px;
+			height: 23px;
 		}
 	}
 	&__basket {
