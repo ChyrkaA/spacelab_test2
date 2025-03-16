@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		if (window.innerWidth <= 991) {
 			changeTabs();
-			initSwiper();
+			// initSwiper();
 		}
 	});
 
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	creatChevrons();
+
 	function creatChevrons() {
 		if (window.matchMedia("(max-width: 767px)").matches) {
 			const columnTitle = document.querySelectorAll(".footer__column-title");
@@ -52,21 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function hamburgerFunc(e) {
-		console.log(1);
 		if (e.target.closest(".hamburger")) {
 			bigMenu.classList.toggle("menu__big-menu_active");
 			hamburger.classList.toggle("hamburger_active");
 
-			const scrollbarWidth =
-				window.innerWidth - document.documentElement.clientWidth;
+			// const scrollbarWidth =
+			//     window.innerWidth - document.documentElement.clientWidth;
 
-			if (body.style.overflow === "hidden") {
-				body.style.overflow = "";
-				body.style.paddingRight = "";
-			} else {
-				body.style.overflow = "hidden";
-				body.style.paddingRight = `${scrollbarWidth}px`;
-			}
+			// if (body.style.overflow === "hidden") {
+			//     body.style.overflow = "";
+			//     body.style.paddingRight = "";
+			// } else {
+			//     body.style.overflow = "hidden";
+			//     body.style.paddingRight = `${scrollbarWidth}px`;
+			// }
 		}
 	}
 
@@ -103,27 +103,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	listenerAction("click");
 
-	initSwiper();
-	function initSwiper() {
-		if (window.matchMedia("(max-width: 991px)").matches) {
-			if (!document.querySelector(".nft__cards_container").swiper) {
-				new Swiper(".nft__cards_container", {
-					slidesPerView: "auto",
-					loop: false,
-					spaceBetween: 25,
-				});
-			}
+	// initSwiper();
 
-			if (!document.querySelector(".explorecol__container").swiper) {
-				new Swiper(".explorecol__container", {
-					slidesPerView: "auto",
-					loop: false,
-					spaceBetween: 25,
-				});
-			}
-		}
-	}
+	// function initSwiper() {
+	// 	if (window.matchMedia("(max-width: 991px)").matches) {
+	// 		if (!document.querySelector(".nft__cards_container").swiper) {
+	// 			new Swiper(".nft__cards_container", {
+	// 				slidesPerView: "auto",
+	// 				loop: false,
+	// 				spaceBetween: 25,
+	// 			});
+	// 		}
+
+	// 		if (!document.querySelector(".explorecol__container").swiper) {
+	// 			new Swiper(".explorecol__container", {
+	// 				slidesPerView: "auto",
+	// 				loop: false,
+	// 				spaceBetween: 25,
+	// 			});
+	// 		}
+	// 	}
+	// }
+
 	changeTabs();
+
 	function changeTabs() {
 		if (window.matchMedia("(max-width: 991px)").matches) {
 			const tab = document.querySelectorAll(".sellers__tab");
@@ -142,5 +145,22 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			});
 		}
+	}
+
+	function onDisplay(entry) {
+		entry.forEach((change) => {
+			if (change.isIntersecting && change.target.dataset.src) {
+				change.target.src = change.target.dataset.src;
+				change.target.removeAttribute("data-src");
+			}
+		});
+	}
+	const elements = document.querySelectorAll("img");
+	const options = {
+		threshold: [0],
+	};
+	const observer = new IntersectionObserver(onDisplay, options);
+	for (let elm of elements) {
+		observer.observe(elm);
 	}
 });

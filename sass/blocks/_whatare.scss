@@ -1,9 +1,11 @@
 @use "../libs/variables" as *;
+
 .whatare {
-	background: url(../img/whatare/bckg.webp) no-repeat center/cover;
+	//background: url(../img/whatare/bckg.webp) no-repeat center/cover;
 	margin-top: 179px;
 	height: 556px;
 	position: relative;
+
 	&__wrapper {
 		position: absolute;
 		top: 220px;
@@ -16,6 +18,7 @@
 		padding: 58px 47px 51px 71px;
 		display: flex;
 		flex-direction: column;
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -36,6 +39,7 @@
 				linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
 		}
 	}
+
 	&__title {
 		font-family: Inter;
 		font-weight: 800;
@@ -45,6 +49,7 @@
 		color: $text-color;
 		margin: 0;
 	}
+
 	&__text {
 		font-family: Inter;
 		font-weight: 400;
@@ -55,12 +60,14 @@
 		margin: 0;
 		margin-top: 18px;
 	}
+
 	&__links {
 		display: flex;
 		justify-content: space-between;
 		width: 271px;
 		margin-top: 45px;
 	}
+
 	&__link {
 		font-family: Inter;
 		font-weight: 500;
@@ -71,6 +78,7 @@
 		text-decoration: none;
 		cursor: pointer;
 		z-index: 1;
+
 		&:hover {
 			color: $text-color;
 			text-decoration: none;
